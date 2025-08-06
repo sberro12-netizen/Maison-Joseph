@@ -4,128 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maison Joseph</title>
-  <!-- Linking the stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+    .hero {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    .collection {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+    .item {
+      position: relative;
+      overflow: hidden;
+    }
+    .item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .item:hover img {
+      transform: scale(1.05);
+    }
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header with logo and navigation -->
   <header>
     <h1>Maison Joseph</h1>
     <nav>
-      <ul>
-        <li><a href="#histoire">Notre histoire</a></li>
-        <li><a href="#produits">Produits</a></li>
-        <li><a href="#precommande">Précommande</a></li>
-      </ul>
+      <a href="#">Accueil</a>
+      <a href="#collection">Collection</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
-
-  <!-- Hero section -->
   <section class="hero">
-    <h2>Essentiels de luxe. Style intemporel.</h2>
+    <h2>Les essentiels. Revisités.</h2>
   </section>
-
-  <!-- Story / History section -->
-  <section id="histoire" class="section">
-    <h2>Notre histoire</h2>
-    <p>
-      Maison Joseph incarne une vision contemporaine du vêtement essentiel, aux finitions réfléchies
-      et à l’élégance discrète. Inspirée par l’énergie parisienne et le raffinement minimaliste,
-      chaque pièce reflète un engagement pour la qualité et le style intemporel.
-    </p>
-  </section>
-
-  <!-- Products listing -->
-  <section id="produits" class="section">
-    <h2>Nos produits</h2>
-    <div class="product-grid">
-      <!-- Product 1 -->
-      <div class="product">
-        <img src="produit1.png" alt="Sweat noir usé" />
-        <h3>Hoodie noir usé</h3>
-        <p>95&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 2 -->
-      <div class="product">
-        <img src="produit2.png" alt="Sweat zippé noir" />
-        <h3>Sweat zippé noir</h3>
-        <p>105&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 3 -->
-      <div class="product">
-        <img src="produit3.png" alt="Sweat gris usé" />
-        <h3>Hoodie gris usé</h3>
-        <p>95&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 4 -->
-      <div class="product">
-        <img src="produit4.png" alt="T-shirt écru Maison Joseph" />
-        <h3>T-shirt écru Maison Joseph</h3>
-        <p>65&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 5 -->
-      <div class="product">
-        <img src="produit5.png" alt="T-shirt gris foncé" />
-        <h3>T-shirt gris foncé</h3>
-        <p>65&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 6 -->
-      <div class="product">
-        <img src="produit6.png" alt="Hoodie noir couture contrastée" />
-        <h3>Hoodie noir couture contrastée</h3>
-        <p>100&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 7 -->
-      <div class="product">
-        <img src="produit7.png" alt="T-shirt noir" />
-        <h3>T-shirt noir</h3>
-        <p>65&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 8 -->
-      <div class="product">
-        <img src="produit8.png" alt="Hoodie gris couture contrastée" />
-        <h3>Hoodie gris couture contrastée</h3>
-        <p>100&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 9 -->
-      <div class="product">
-        <img src="produit9.png" alt="Hoodie vert zippé" />
-        <h3>Hoodie vert zippé</h3>
-        <p>100&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
-      <!-- Product 10 -->
-      <div class="product">
-        <img src="produit10.png" alt="Hoodie taupe zippé" />
-        <h3>Hoodie taupe zippé</h3>
-        <p>100&nbsp;€</p>
-        <a href="#precommande" class="btn">Précommander</a>
-      </div>
+  <section class="collection" id="collection">
+    <div class="item">
+      <img src="https://via.placeholder.com/500x600?text=Produit+1" alt="Produit 1" />
+      <div class="caption">Sweat Noir - Surpiqûres Blanches</div>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/500x600?text=Produit+2" alt="Produit 2" />
+      <div class="caption">T-shirt Gris - Col retravaillé</div>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/500x600?text=Produit+3" alt="Produit 3" />
+      <div class="caption">Jogging Blanc - Coupe Parisienne</div>
     </div>
   </section>
-
-  <!-- Pre-order section -->
-  <section id="precommande" class="section">
-    <h2>Précommande</h2>
-    <p>
-      Pour passer commande, veuillez remplir notre formulaire de précommande. Nous vous contacterons
-      pour confirmer votre commande et organiser le paiement.
-    </p>
-    <!-- Replace the link below with your actual form link (Tally, Typeform, etc.) -->
-    <a href="https://tally.so" target="_blank" class="btn">Accéder au formulaire</a>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Maison Joseph. Tous droits réservés.</p>
+    © Maison Joseph – Tous droits réservés
   </footer>
 </body>
 </html>
